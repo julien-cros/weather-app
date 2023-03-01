@@ -13,7 +13,7 @@ const SearchCity = ({ cities }: SearchCityProps) => {
 	const [filteredData, setFilteredData] = useState<CityAPIResponseType>([]);
 
 	useEffect(() => {
-		if (query.length < 3) return
+		if (query.length < 3 || !cities) return
 
 		setFilteredData(
 			cities

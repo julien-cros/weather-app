@@ -40,8 +40,8 @@ const WeatherAPIResponse = z.object({
 	timezone: z.number(),
 	id: z.number(),
 	name: z.string(),
-	cod: z.number(),
-})
+	cod: z.any(),
+}).deepPartial()
 
 export type WeatherAPIResponseType = z.infer<typeof WeatherAPIResponse>
 
